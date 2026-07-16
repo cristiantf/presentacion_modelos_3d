@@ -13,9 +13,9 @@ Para el desarrollo de esta plataforma, adoptaremos una metodología basada en **
 
 ### Sprint 1: Arquitectura y Base de Datos
 **Objetivo:** Establecer los cimientos del proyecto.
-- [ ] Inicialización del proyecto Node.js (`package.json`).
-- [ ] Creación de la base de datos MySQL y tablas (`admins`, `modelos`).
-- [ ] Configuración de la conexión a la base de datos en Node (`db.js`).
+- [x] Inicialización del proyecto Node.js (`package.json`).
+- [x] Creación de la base de datos MySQL y tablas (`admins`, `modelos`).
+- [x] Configuración de la conexión a la base de datos en Node (`db.js`).
 
 ### Sprint 2: Backend y Autenticación (API)
 **Objetivo:** Lógica del servidor y seguridad.

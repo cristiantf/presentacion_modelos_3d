@@ -1,0 +1,29 @@
+{
+  "name": "presentacion_modelos_3d",
+  "version": "1.0.0",
+  "description": "Este proyecto es una aplicación web interactiva diseñada para la exhibición de modelos 3D (formato `.glb`) durante la Feria del Instituto (ISTAE). Su objetivo principal es ofrecer una experiencia visual moderna e inmersiva (utilizando tonos blanco y azul claro) para los visitantes de la feria, al mismo tiempo que proporciona un panel de administración robusto para la gestión del contenido.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristiantf/presentacion_modelos_3d.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cristiantf/presentacion_modelos_3d/issues"
+  },
+  "homepage": "https://github.com/cristiantf/presentacion_modelos_3d#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.2.0",
+    "mysql2": "^3.23.0"
+  }
+}

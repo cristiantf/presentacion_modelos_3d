@@ -19,15 +19,15 @@ Para el desarrollo de esta plataforma, adoptaremos una metodología basada en **
 
 ### Sprint 2: Backend y Autenticación (API)
 **Objetivo:** Lógica del servidor y seguridad.
-- [ ] Implementación de `express-session`.
-- [ ] Desarrollo del endpoint de Login y encriptación de contraseñas.
-- [ ] Desarrollo de rutas CRUD para modelos (Subida de archivos con `multer`).
+- [x] Implementación de `express-session`.
+- [x] Desarrollo del endpoint de Login y encriptación de contraseñas.
+- [x] Desarrollo de rutas CRUD para modelos (Subida de archivos con `multer`).
 
 ### Sprint 3: Frontend y Diseño UI/UX
 **Objetivo:** Interfaz gráfica orientada a la identidad del instituto (Blanco y Azul Claro).
-- [ ] Creación de maquetas HTML (`index.html`, `viewer.html`, `admin.html`).
-- [ ] Implementación de CSS puro con diseño responsivo, paleta de colores corporativa e integración del logo `logo_ISATE.png`.
-- [ ] Integración del componente `<model-viewer>`.
+- [x] Creación de maquetas HTML (`index.html`, `viewer.html`, `admin.html`).
+- [x] Implementación de CSS puro con diseño responsivo, paleta de colores corporativa e integración del logo `logo_ISATE.png`.
+- [x] Integración del componente `<model-viewer>`.
 
 ### Sprint 4: Integración y Pruebas
 **Objetivo:** Conectar el Frontend con el Backend y asegurar calidad.

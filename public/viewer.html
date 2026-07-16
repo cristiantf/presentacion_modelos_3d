@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 3D - ISTAE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importar model-viewer de Google -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/img/logo_ISATE.png" alt="Logo ISTAE">
+            <h1>Feria de Modelos 3D</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">← Volver a la Galería</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="model-viewer-container">
+            <model-viewer id="viewer-element" 
+                alt="Modelo 3D" 
+                auto-rotate 
+                camera-controls 
+                shadow-intensity="1"
+                environment-image="neutral"
+                exposure="1">
+            </model-viewer>
+        </div>
+        
+        <div class="viewer-details" id="viewer-info">
+            <h2 id="model-title">Cargando...</h2>
+            <p id="model-desc" class="mt-2"></p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

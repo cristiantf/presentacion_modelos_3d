@@ -1,8 +1,8 @@
 # Estado del Proyecto
 
 **Última Actualización:** 16 de Julio de 2026
-**Fase Actual:** Desarrollo de API y Autenticación (Sprint 2)
-**Progreso General:** `35%`
+**Fase Actual:** Integración y Pruebas (Sprint 4)
+**Progreso General:** `85%`
 
 ---
 
@@ -12,12 +12,12 @@
 | :--- | :---: | :---: | :--- |
 | **Fase 1: Planificación y Documentación** | Completado | 100% | Documentación generada. |
 | **Fase 2: Base de Datos** | Completado | 100% | Base de datos creada en XAMPP y conexión configurada. |
-| **Fase 3: Backend (API y Auth)** | En Curso | 10% | Inicio del Sprint 2. |
-| **Fase 4: Frontend (UI/UX Pública)** | Pendiente | 0% | Diseño en blanco/azul claro pendiente de codificación. |
-| **Fase 5: Panel de Administración** | Pendiente | 0% | Interfaz de gestión de modelos pendiente de desarrollo. |
-| **Fase 6: Despliegue (cPanel)** | Pendiente | 0% | Pruebas locales y subida a producción en cPanel. |
+| **Fase 3: Backend (API y Auth)** | Completado | 100% | Autenticación y subida de archivos finalizada. |
+| **Fase 4: Frontend (UI/UX Pública)** | Completado | 100% | Diseño corporativo e integración visual completada. |
+| **Fase 5: Panel de Administración** | Completado | 100% | Dashboard listo con alertas dinámicas. |
+| **Fase 6: Despliegue (cPanel)** | En Curso | 0% | Pendiente Sprint 4 de Integración y validación final. |
 
 ## 📝 Resumen del Sprint Actual
-- **Objetivo actual:** Sprint 2: Lógica del servidor y seguridad.
+- **Objetivo actual:** Sprint 4: Integración, testing y preparación para el despliegue.
 - **Bloqueos:** Ninguno actualmente.
-- **Siguientes pasos:** Configurar `server.js`, las rutas de Express y el sistema de login con `express-session`.
+- **Siguientes pasos:** Iniciar el servidor local (`node server.js`), probar el login con admin y validar que se pueda subir y ver un archivo `.glb` real.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Modelos 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/img/logo_ISATE.png" alt="Logo ISTAE">
+            <h1>Panel de Control</h1>
+        </div>
+        <nav class="nav-links">
+            <span id="user-greeting" style="font-weight: 600; color: var(--primary-blue);"></span>
+            <a href="index.html">Galería Pública</a>
+            <a href="#" id="btn-logout" class="btn-primary" style="background: #E53935;">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <h2 class="section-title" style="font-size: 2rem;">Subir Nuevo Modelo</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="titulo">Título del Proyecto:</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" required placeholder="Ej: Motor 4T">
+                </div>
+                
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" rows="4" required placeholder="Describe los detalles del modelo..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modelo_glb">Archivo 3D (.glb):</label>
+                    <input type="file" id="modelo_glb" name="modelo_glb" accept=".glb" class="form-control" required style="padding: 0.5rem;">
+                </div>
+                
+                <button type="submit" class="btn-primary" id="btn-submit" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Subir a la Galería</button>
+            </form>
+
+            <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--light-blue);">
+
+            <h2 class="section-title" style="font-size: 2rem;">Modelos Publicados</h2>
+            <div style="overflow-x: auto;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Fecha de Subida</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-models-list">
+                        <!-- Llenado dinámicamente -->
+                        <tr><td colspan="4" class="text-center">Cargando modelos...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

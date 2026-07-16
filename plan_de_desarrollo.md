@@ -31,6 +31,6 @@ Para el desarrollo de esta plataforma, adoptaremos una metodología basada en **
 
 ### Sprint 4: Integración y Pruebas
 **Objetivo:** Conectar el Frontend con el Backend y asegurar calidad.
-- [ ] Consumo de la API desde JS (Fetch API) para mostrar modelos dinámicamente.
-- [ ] Pruebas de carga del archivo `.glb` proporcionado por el instituto.
-- [ ] Corrección de errores (Bug fixing) y pulido de animaciones.
+- [x] Consumo de la API desde JS (Fetch API) para mostrar modelos dinámicamente.
+- [x] Pruebas de carga del archivo `.glb` proporcionado por el instituto.
+- [x] Corrección de errores (Bug fixing) y pulido de animaciones.

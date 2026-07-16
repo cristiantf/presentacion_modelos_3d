@@ -80,6 +80,28 @@ router.post('/', isAuthenticated, upload.single('modelo_glb'), (req, res) => {
     });
 });
 
+// PUT: Editar un modelo (Protegido)
+router.put('/:id', isAuthenticated, (req, res) => {
+    const { titulo, descripcion } = req.body;
+    const modelId = req.params.id;
+
+    if (!titulo || !descripcion) {
+        return res.status(400).json({ success: false, message: 'Título y descripción son requeridos' });
+    }
+
+    db.query('UPDATE modelos SET titulo = ?, descripcion = ? WHERE id = ?', 
+    [titulo, descripcion, modelId], 
+    (err, results) => {
+        if (err) return res.status(500).json({ success: false, message: 'Error al actualizar base de datos' });
+        
+        if (results.affectedRows === 0) {
+            return res.status(404).json({ success: false, message: 'Modelo no encontrado' });
+        }
+        
+        res.json({ success: true, message: 'Modelo actualizado exitosamente' });
+    });
+});
+
 // DELETE: Eliminar un modelo (Protegido)
 router.delete('/:id', isAuthenticated, (req, res) => {
     const modelId = req.params.id;

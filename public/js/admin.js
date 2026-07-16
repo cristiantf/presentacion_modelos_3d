@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>${m.titulo}</td>
                         <td>${date}</td>
                         <td>
+                            <button class="btn-edit" onclick="editModel(${m.id}, '${m.titulo.replace(/'/g, "\\'")}', '${m.descripcion.replace(/'/g, "\\'")}')">Editar</button>
                             <button class="btn-danger" onclick="deleteModel(${m.id})">Eliminar</button>
                         </td>
                     `;
@@ -147,6 +148,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     if (resJson.success) {
                         Swal.fire('Eliminado!', 'El modelo ha sido eliminado.', 'success');
+                        loadAdminModels();
+                    } else {
+                        Swal.fire('Error', resJson.message, 'error');
+                    }
+                } catch (error) {
+                    Swal.fire('Error', 'Hubo un error al conectar con el servidor.', 'error');
+                }
+            }
+        });
+    };
+
+    // Función global para editar
+    window.editModel = (id, currentTitle, currentDesc) => {
+        Swal.fire({
+            title: 'Editar Modelo',
+            html: `
+                <input id="swal-input-title" class="swal2-input" placeholder="Título" value="${currentTitle}">
+                <textarea id="swal-input-desc" class="swal2-textarea" placeholder="Descripción" style="margin-top: 10px;">${currentDesc}</textarea>
+            `,
+            showCancelButton: true,
+            confirmButtonText: 'Guardar Cambios',
+            cancelButtonText: 'Cancelar',
+            preConfirm: () => {
+                const titulo = document.getElementById('swal-input-title').value;
+                const descripcion = document.getElementById('swal-input-desc').value;
+                if (!titulo || !descripcion) {
+                    Swal.showValidationMessage('El título y la descripción son requeridos');
+                }
+                return { titulo, descripcion };
+            }
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    const response = await fetch(`/api/models/${id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(result.value)
+                    });
+                    const resJson = await response.json();
+                    
+                    if (resJson.success) {
+                        Swal.fire('¡Actualizado!', 'El modelo ha sido actualizado.', 'success');
                         loadAdminModels();
                     } else {
                         Swal.fire('Error', resJson.message, 'error');

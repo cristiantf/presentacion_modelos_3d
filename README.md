@@ -14,7 +14,7 @@ Este proyecto es una aplicación web interactiva diseñada para la exhibición d
 - **Autenticación Segura:** Sistema de inicio de sesión exclusivo para administradores.
 - **Gestión de Modelos (CRUD):** 
   - Subir nuevos modelos 3D (`.glb`).
-  - Asignar título y descripción a cada modelo.
+  - Editar el título y descripción de modelos existentes.
   - Eliminar modelos obsoletos.
 - **Dashboard Estadístico:** Vista general de los modelos actualmente en exhibición.
 

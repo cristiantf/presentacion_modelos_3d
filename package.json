@@ -4,7 +4,11 @@
   "description": "Este proyecto es una aplicación web interactiva diseñada para la exhibición de modelos 3D (formato `.glb`) durante la Feria del Instituto (ISTAE). Su objetivo principal es ofrecer una experiencia visual moderna e inmersiva (utilizando tonos blanco y azul claro) para los visitantes de la feria, al mismo tiempo que proporciona un panel de administración robusto para la gestión del contenido.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-db": "node scratch/test_db.js",
+    "test-db2": "node scratch/test_db2.js",
+    "test-db3": "node scratch/test_db3.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
